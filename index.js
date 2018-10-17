@@ -32,7 +32,7 @@ var sslOptions = {
 //create the server
 var port = ( ( argv.p || argv.port ) ? ( argv.p || argv.port ) : 8080 );
 
-var srv = ssl ? https.createServer( sslOptions): http.createServer();
+var srv = ssl ? https.createServer( sslOptions, OnRequest): http.createServer(OnRequest);
 //console.log( 'Serving on port ' + port );
 
 // Our GUN setup from the last example.
@@ -41,6 +41,37 @@ var gun = Gun({
     //file: false,
     web: srv
 });
+
+
+function serve(request, response){
+
+    response.writeHead( 200, {
+        "Content-Type": "application/json"
+    } );
+    var jsonobject = {
+        "db": "v0.0.2"
+        //"instances": inst
+    }
+    response.write( JSON.stringify( jsonobject ), "utf8" );
+    response.end();	
+    //console.log("Serve here")
+
+}
+
+function OnRequest(request, response) {
+    try {
+        serve(request, response);
+        // vwf.Serve( request, response );
+       
+    } catch (e) {
+        response.writeHead(500, {
+            "Content-Type": "text/plain"
+        });
+        response.write(e.toString(), "utf8");
+        response.end();
+    }
+} // close onRequest
+
 
 // Start the server on port 8080.
 srv.listen(port, function () {
