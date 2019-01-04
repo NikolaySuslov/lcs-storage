@@ -3,7 +3,8 @@ var http = require('http'),
     fs = require('fs'),
     argv = require('optimist').argv,
     https = require('https'),
-    Gun = require('gun')
+    Gun = require('gun'),
+    Sea = require('gun/sea')
    // require('gun/lib/shim')
    // require('gun/lib/path')
    // require('gun/lib/bye')
