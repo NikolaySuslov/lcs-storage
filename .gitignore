@@ -5,3 +5,5 @@ certs
 ossl
 radata
 data.json
+*radata*
+*report*
