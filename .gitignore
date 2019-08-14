@@ -4,6 +4,8 @@ node_modules
 certs
 ossl
 radata
+radata-p
 data.json
 *radata*
+*radata-p*
 *report*
