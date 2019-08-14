@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./index.js",
-    "startSSL": "node ./index.js -p 8080 -s -k ./certs/192.168.0.10.key -c ./certs/192.168.0.10.pem"
+    "startSSL": "node ./index.js -p 8080 -s -k ./certs/192.168.0.10.key -c ./certs/192.168.0.10.pem "
   },
   "repository": {
     "type": "git",
