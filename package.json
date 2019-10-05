@@ -16,7 +16,7 @@
   "author": "Nikolay Suslov",
   "license": "MIT",
   "dependencies": {
-    "gun": "0.2019.915",
+    "gun": "0.2019.930",
     "optimist": "0.6.1"
   }
 }
