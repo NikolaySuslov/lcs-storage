@@ -45,7 +45,6 @@ setInterval(function () {
     global.gun.get('server').get('heartbeat').get('tick').put(JSON.stringify(message),function(ack){
         if(ack.err){ 
             console.log('ERROR: ' + ack.err)
-             
         }});
 
-}, 50); //FIX ERR: syncing c
+}, 50);
