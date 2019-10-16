@@ -27,11 +27,12 @@ global.gun = Gun({ web: config.server.listen(config.port), axe: false}); //until
 console.log('Relay peer started on port ' + config.port + ' with /gun');
 
 let tickMsg = {
-    parameters: [],
-    time: 'tick'//hb
+    parameters: "[]",
+    time: 'tick',//hb
+    sender: 'server'
 };
 
-global.gun.get('server').get('heartbeat').get('tick').put(JSON.stringify(tickMsg));
+global.gun.get('server').get('heartbeat').get('tick').put(tickMsg);
 
 //instance.get('heartbeat').put({ tick: "{}" }).heartbeat(0.0, 1);
 
