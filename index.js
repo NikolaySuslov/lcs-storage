@@ -38,11 +38,12 @@ global.gun.get('server').get('heartbeat').get('tick').put(JSON.stringify(tickMsg
 setInterval(function () {
 
     let message = {
-        parameters: [],
-        time: 'tick'//hb
+        parameters: "[]",
+        time: 'tick', //hb
+        sender: 'server'
     };
 
-    global.gun.get('server').get('heartbeat').get('tick').put(JSON.stringify(message),function(ack){
+    global.gun.get('server').get('heartbeat').get('tick').put(message,function(ack){
         if(ack.err){ 
             console.log('ERROR: ' + ack.err)
         }});
