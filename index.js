@@ -23,7 +23,16 @@ if (conf.ssl) {
     config.server = require('http').createServer(Gun.serve(__dirname));
 }
 
-global.gun = Gun({ web: config.server.listen(config.port), axe: false}); //until: 5000, chunk: 10 
+global.gun = Gun({ 
+        web: config.server.listen(config.port),
+        peers: [(`https://localhost:${config.port}/gun`)],
+        radisk: true,
+        axe: false}); //until: 5000, chunk: 10
+
+
+//Sync all (not work for now)
+//global.gun.on('out',{get: {'#': {'*': ''}}})
+
 console.log('Relay peer started on port ' + config.port + ' with /gun');
 
 let tickMsg = {
