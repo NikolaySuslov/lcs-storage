@@ -16,7 +16,7 @@
   "author": "Nikolay Suslov",
   "license": "MIT",
   "dependencies": {
-    "gun": "0.2020.430",
+    "gun": "0.2020.514",
     "yargs": "15.3.1"
   }
 }
