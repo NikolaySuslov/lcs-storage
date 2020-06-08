@@ -26,6 +26,7 @@ if (conf.ssl) {
 global.gun = Gun({ 
         web: config.server.listen(config.port),
         peers: [(`https://localhost:${config.port}/gun`)],
+        multicast: false,
         radisk: true,
         axe: false}); //until: 5000, chunk: 10
 
@@ -55,7 +56,7 @@ setInterval(function () {
 
     global.gun.get('server').get('heartbeat').get('tick').put(message,function(ack){
         if(ack.err){ 
-            console.log('ERROR: ' + ack.err)
+            //console.log('ERROR: ' + ack.err)
         }});
 
 }, 50);

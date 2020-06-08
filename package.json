@@ -1,6 +1,6 @@
 {
   "name": "lcs-storage",
-  "version": "0.0.1",
+  "version": "0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "Nikolay Suslov",
   "license": "MIT",
   "dependencies": {
-    "gun": "0.2020.514",
+    "gun": "0.2020.520",
     "yargs": "15.3.1"
   }
 }
