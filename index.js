@@ -36,27 +36,27 @@ global.gun = Gun({
 
 console.log('Relay peer started on port ' + config.port + ' with /gun');
 
-let tickMsg = {
-    parameters: "[]",
-    time: 'tick',//hb
-    sender: 'server'
-};
+// let tickMsg = {
+//     parameters: "[]",
+//     time: 'tick',//hb
+//     sender: 'server'
+// };
 
-global.gun.get('server').get('heartbeat').get('tick').put(tickMsg);
+// global.gun.get('server').get('heartbeat').get('tick').put(tickMsg);
 
 //instance.get('heartbeat').put({ tick: "{}" }).heartbeat(0.0, 1);
 
-setInterval(function () {
+// setInterval(function () {
 
-    let message = {
-        parameters: "[]",
-        time: 'tick', //hb
-        sender: 'server'
-    };
+//     let message = {
+//         parameters: "[]",
+//         time: 'tick', //hb
+//         sender: 'server'
+//     };
 
-    global.gun.get('server').get('heartbeat').get('tick').put(message,function(ack){
-        if(ack.err){ 
-            //console.log('ERROR: ' + ack.err)
-        }});
+//     global.gun.get('server').get('heartbeat').get('tick').put(message,function(ack){
+//         if(ack.err){ 
+//             //console.log('ERROR: ' + ack.err)
+//         }});
 
-}, 50);
+// }, 50);
