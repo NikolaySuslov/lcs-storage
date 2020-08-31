@@ -17,6 +17,6 @@
   "license": "MIT",
   "dependencies": {
     "gun": "0.2020.520",
-    "yargs": "15.3.1"
+    "yargs": "15.4.1"
   }
 }
