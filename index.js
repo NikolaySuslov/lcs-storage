@@ -1,6 +1,7 @@
 // var fs = require('fs'),
 //     argv = require('optimist').argv
 
+var argv = require('yargs').argv;
 var config = require('./readConfig');
 
 var Gun = require('gun')

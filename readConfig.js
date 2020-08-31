@@ -4,8 +4,8 @@ Copyright (c) 2014-2018 Nikolai Suslov and the Krestianstvo.org project contribu
 ADL VW Sandbox Apache 2.0 license(https://github.com/NikolaySuslov/lcs-reflector/blob/master/licenses/LICENSE_ADL_Sandbox.md)
 */
 
-var fs = require('fs'),
-    argv = require('yargs').argv
+var fs = require('fs');
+var argv = require('yargs').argv;
     //logger = require('./logger')
 
 function parseConfigOptions() {

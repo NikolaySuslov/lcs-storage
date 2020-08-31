@@ -1,6 +1,6 @@
 {
   "name": "lcs-storage",
-  "version": "0.7",
+  "version": "0.7.0",
   "description": "",
   "main": "index.js",
   "scripts": {
